@@ -2,12 +2,8 @@
 
 ## Introduction
 Moonbag
-
-## Category
-DeFi
-
-## Smart Contract
-SafeERC20
+Category: DeFi
+Smart Contract: SafeERC20
 
 # Function Analysis
 forceApprove
