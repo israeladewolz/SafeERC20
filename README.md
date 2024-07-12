@@ -29,4 +29,4 @@ Detailed Usage:
 The low-level `call` exists for backwards compatibility with ERC20 tokens which due to lack of adherence to the standard couldn't strongly follow it, allowing a more robust and safe way of setting allowances.
 
 Impact: The `forceApprove` function improves the SafeERC20 library with a reliable way to set token allowances, which includes all the non-compliant ERC20. This functionality is critical to DeFi protocols that interact with a wide array of tokens, ensuring that this protocol runs smoothly and predictably.
-```
+
