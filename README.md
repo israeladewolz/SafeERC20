@@ -1,8 +1,6 @@
 # SafeERC20
 
 # Introduction
-
-## Protocol Name
 Moonbag
 
 ## Category
@@ -12,8 +10,6 @@ DeFi
 SafeERC20
 
 # Function Analysis
-
-## Function Name
 forceApprove
 
 ## Block Explorer Link
