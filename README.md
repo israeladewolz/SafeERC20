@@ -17,7 +17,7 @@ Function Code: function forceApprove(IERC20 token, address spender, uint256 valu
         _callOptionalReturn(token, abi.encodeWithSelector(token.approve.selector, spender, 0));
         _callOptionalReturn(token, approvalCall);
     }
-}
+
 ## Explanation
 
 Purpose: The `forceApprove` function is intended to set some allowance of an ERC20 token for the use of a spender. The first attempt at approval, in the case of failure, resets the allowance to zero before setting it.
