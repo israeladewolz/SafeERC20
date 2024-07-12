@@ -21,6 +21,7 @@ Function Code: function forceApprove(IERC20 token, address spender, uint256 valu
 ## Explanation
 
 Purpose: The `forceApprove` function is intended to set some allowance of an ERC20 token for the use of a spender. The first attempt at approval, in the case of failure, resets the allowance to zero before setting it.
+
 Detailed Usage:
 - **Encoding:** The function uses `abi.encodeWithSelector` to encode the `approve` function selector along with the spender's address and the value to be approved. This creates the call data necessary for interacting with the ERC20 token contract.
 - **Low-Level Call:** The `_callOptionalReturnBool` function uses a low-level `call` to execute the encoded call for approval on the token contract. What it does is to bypass the high-level checks in Solidity, thus handling the success or failure of the call manually.
