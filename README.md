@@ -28,14 +28,13 @@ function forceApprove(IERC20 token, address spender, uint256 value) internal {
 # Explanation
 
 ## Purpose
-The `forceApprove` function aims to set an ERC20 token's allowance for a spender. If the initial approval attempt fails, it first resets the allowance to zero before setting it to the desired value.
-
+The `forceApprove` function is intended to set some allowance of an ERC20 token for the use of a spender. The first attempt at approval, in the case of failure, resets the allowance to zero before setting it.
 ## Detailed Usage
 - **Encoding:** The function uses `abi.encodeWithSelector` to encode the `approve` function selector along with the spender's address and the value to be approved. This creates the call data necessary for interacting with the ERC20 token contract.
-- **Low-Level Call:** The `_callOptionalReturnBool` function uses a low-level `call` to execute the encoded approval call on the token contract. This bypasses Solidity's high-level checks and manually handles the success or failure of the call.
+- **Low-Level Call:** The `_callOptionalReturnBool` function uses a low-level `call` to execute the encoded call for approval on the token contract. What it does is to bypass the high-level checks in Solidity, thus handling the success or failure of the call manually.
 
-The low-level `call` is used to ensure compatibility with ERC20 tokens that might not strictly adhere to the standard, providing a more robust and fail-safe approach to setting allowances.
+The low-level `call` exists for backwards compatibility with ERC20 tokens which due to lack of adherence to the standard couldn't strongly follow it, allowing a more robust and safe way of setting allowances.
 
 ## Impact
-The `forceApprove` function enhances the SafeERC20 library by providing a reliable method for setting token allowances, even for non-compliant ERC20 tokens. This functionality is crucial for DeFi protocols that interact with a variety of tokens, ensuring smooth and predictable operations within the protocol.
+The `forceApprove` function improves the SafeERC20 library with a reliable way to set token allowances, which includes all the non-compliant ERC20. This functionality is critical to DeFi protocols that interact with a wide array of tokens, ensuring that this protocol runs smoothly and predictably.
 ```
