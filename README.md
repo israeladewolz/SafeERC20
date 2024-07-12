@@ -5,7 +5,7 @@
 **Category:** DeFi  
 **Smart Contract:** (SafeERC20)  
 
-# Function Analysis
+## Function Analysis
 Function Name: forceApprove
 
 Block Explorer Link: [Moonbag Contract on Etherscan](https://etherscan.io/address/0xa7F4195F10F1a62B102bD683eAB131d657A6c6e4#code)
@@ -18,7 +18,7 @@ Function Code: function forceApprove(IERC20 token, address spender, uint256 valu
         _callOptionalReturn(token, approvalCall);
     }
 }
-# Explanation
+## Explanation
 
 Purpose: The `forceApprove` function is intended to set some allowance of an ERC20 token for the use of a spender. The first attempt at approval, in the case of failure, resets the allowance to zero before setting it.
 Detailed Usage:
