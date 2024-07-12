@@ -1,6 +1,6 @@
 # SafeERC20
 
-# Introduction
+## Introduction
 Moonbag
 
 ## Category
