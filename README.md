@@ -1,7 +1,6 @@
 # SafeERC20
 
 ## Introduction
-
 **Protocol Name:** Moonbag  
 **Category:** DeFi  
 **Smart Contract:** (SafeERC20)  
